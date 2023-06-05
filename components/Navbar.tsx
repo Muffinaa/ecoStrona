@@ -1,38 +1,42 @@
-
-import { FaShoppingCart } from 'react-icons/fa'
+"use client"
+import Link from 'next/link';
+import { Input } from "@/components/ui/input"
+import { Button } from '@/components/ui/button';
+import { FaShoppingCart, FaSearch } from 'react-icons/fa'
 
 interface NavbarLink {
-  name: string;
   href: string;
-  icon?: any;
-  iconMode: boolean;
+  icon: any;
 }
 
 const navbarLinks: NavbarLink[] = [
   {
-    name: 'Koszyk',
     href: '/cart',
     icon: <FaShoppingCart />,
-    iconMode: true,
   }
 ]
 
 function Navbar() {
   return (
-    <div className="bg-gray-800 p-3 flex shadow-sm m-1 rounded-md text-white ">
-      <h1 className="font-bold"><span className="text-teal-500">Green</span>Zone</h1>
-        <div className="flex flex-grow justify-end">
-          <ul className="flex  items-center">
-            {navbarLinks.map((link) => (
-              <li className="mx-2" key={link.href}>
-                <a className="hover:text-teal-500 " title={link.name} href={link.href}>
-                  { link.iconMode && link.icon ? link.icon : link.name }
-                </a>
-              </li>
-            )
-            ) }
-          </ul>
-        </div>
+    <div className='bg-background border-b border-border shadow-sm p-3 flex items-center'>
+      <div className='flex-1'>
+        <Link href="/">
+          <h1 className='text-2xl font-bold select-none'>GreenZone</h1>
+        </Link>
+      </div>
+      <div className='flex-grow flex'>
+        <Input placeholder='Wyszukaj produkt...'
+          className='rounded-none' />
+        <Button className='rounded-none' ><FaSearch /></Button>
+      </div>
+      <div className='flex-1 flex justify-end'>
+        {navbarLinks.map((link, index) => (
+          <Link className='flex text-xl p-1  items-center justify-center flex-col'  href={link.href} key={index}>
+            {link.icon}
+          </Link>
+        ))
+        }
+      </div>
     </div>
   )
 }
