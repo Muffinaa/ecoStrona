@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="min-h-screen relative">
           <Navbar />
-          <div className="pb-[12rem]">
+          <div className="pb-[10rem]">
             {children}
           </div>
           <Footer />

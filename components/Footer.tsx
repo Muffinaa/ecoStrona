@@ -4,7 +4,6 @@ interface FooterLink {
     href: string;
     text: string;
 }
-
 const footerLinks: FooterLink[] = [
     {
         href: '/cart',
@@ -18,7 +17,7 @@ const footerLinks: FooterLink[] = [
 
 function Footer() {
     return (
-        <footer className="border-border border-t p-3 gap-5 flex absolute bottom-0 w-full h-[12rem]">
+        <footer className="border-border border-t p-3 gap-5 flex absolute bottom-0 w-full h-[10rem]">
             <div className="flex-1">
                 <h3 className="font-bold">Przydatne Linki:</h3>
                 <ul>
@@ -31,7 +30,7 @@ function Footer() {
                 </ul>
             </div>
             <div className="flex-1">
-                <p className="text-center">Strona wykonana przez Muffina</p>
+                <p className="text-center">Strona wykonana przez ...</p>
             </div>
             <div className="flex-1">
                 <h1 className="font-bold select-none">GreenZone</h1>
