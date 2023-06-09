@@ -18,7 +18,7 @@ const navbarLinks: NavbarLink[] = [
 
 function Navbar() {
   return (
-    <div className='bg-background border-b border-border shadow-sm p-3 flex items-center'>
+    <div className='bg-background border-b border-border shadow-sm p-3 flex items-center mb-3'>
       <div className='flex-1'>
         <Link href="/">
           <h1 className='text-2xl font-bold select-none'>GreenZone</h1>
