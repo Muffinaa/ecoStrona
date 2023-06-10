@@ -15,6 +15,9 @@ module.exports = {
       },
     },
     extend: {
+      gridTemplateColumns: {
+        'productsGrid': 'repeat(auto-fit, minmax(350px, 1fr))',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
