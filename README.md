@@ -10,7 +10,7 @@ Prototyp strony internetowej na konkurs o tematyce przeciwdziałania zmianom kli
 
 ## 🚀 Demo
 
-[ecostrona.vercel.app](https://ecostrona.vercel.app/)
+[ecostrona.vercel.app](https://eco-strona.vercel.app/)
 
 ## 📦 Instalacja
 
